@@ -1,0 +1,52 @@
+PODS:
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
+  - PromiseKit/CorePromise (6.17.1)
+  - SnapKit (5.0.1)
+  - SwiftyStoreKit (0.16.1)
+  - Swinject (2.7.1)
+  - SwinjectStoryboard (2.2.1):
+    - Swinject (~> 2.7.1)
+  - XMLCoder (0.11.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 5.0)
+  - PromiseKit/CorePromise (~> 6.8)
+  - SnapKit (~> 5.0.0)
+  - SwiftyStoreKit
+  - Swinject
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
+  - XMLCoder (~> 0.11.0)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - PromiseKit
+    - SnapKit
+    - SwiftyStoreKit
+    - Swinject
+    - XMLCoder
+
+EXTERNAL SOURCES:
+  SwinjectStoryboard:
+    :branch: master
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  SwinjectStoryboard:
+    :commit: 0877ebbc6169aa05fbd25026d6064e7eb4ab60ca
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+SPEC CHECKSUMS:
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectStoryboard: 92ca3575fec0b87a27d79be2d03f8d94495d6a10
+  XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
+
+PODFILE CHECKSUM: 25cde519c9daf0bf00487a82f472398c207dbe4a
+
+COCOAPODS: 1.11.3

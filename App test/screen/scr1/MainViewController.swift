@@ -8,7 +8,7 @@
 import UIKit
 import SwinjectStoryboard
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 
     @IBOutlet weak var img: UIImageView!
     var viewModel: NetworkInterface?
@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func clickButton(_ sender: Any) {
+        showActivityIndicator()
         viewModel?.callApi()
     }
     
@@ -39,6 +40,7 @@ extension MainViewController: NetworkDelegate {
     func didCallApi(dog: DogEntity) {
         DispatchQueue.main.async {
             self.img.setImage(dog.message)
+            self.hideActivityIndicator()
         }
     }
 }

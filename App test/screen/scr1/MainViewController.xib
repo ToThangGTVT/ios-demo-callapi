@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="App_test" customModuleProvider="target">
             <connections>
+                <outlet property="btnTest" destination="fgj-wv-U7V" id="P1p-Pa-2q0"/>
                 <outlet property="img" destination="RrR-wR-dkk" id="SS9-DW-clR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,19 +37,33 @@
                         <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="eYb-dW-7LV"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgj-wv-U7V">
+                    <rect key="frame" x="10" y="420" width="394" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="MIy-mD-k2x"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                    <connections>
+                        <action selector="clickBtnTest:" destination="-1" eventType="touchUpInside" id="eDB-kR-mvL"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="eWj-g9-eyo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0YN-re-Xcg"/>
+                <constraint firstItem="fgj-wv-U7V" firstAttribute="top" secondItem="eWj-g9-eyo" secondAttribute="bottom" constant="10" id="71M-RG-rHf"/>
                 <constraint firstItem="eWj-g9-eyo" firstAttribute="top" secondItem="RrR-wR-dkk" secondAttribute="bottom" constant="10" id="AS7-DM-1ne"/>
+                <constraint firstItem="fgj-wv-U7V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="CRh-gF-ILT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RrR-wR-dkk" secondAttribute="trailing" id="H5F-YW-sdr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="RrR-wR-dkk" secondAttribute="top" id="TPT-bF-gjw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eWj-g9-eyo" secondAttribute="trailing" constant="10" id="ZRf-6S-cqZ"/>
                 <constraint firstItem="eWj-g9-eyo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="a67-3k-aCr"/>
+                <constraint firstAttribute="trailing" secondItem="fgj-wv-U7V" secondAttribute="trailing" constant="10" id="dhh-0P-LEA"/>
                 <constraint firstItem="RrR-wR-dkk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tQc-uQ-mwk"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="126"/>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </view>
     </objects>
 </document>

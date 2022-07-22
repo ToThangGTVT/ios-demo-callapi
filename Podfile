@@ -8,6 +8,7 @@ def defaultPod
     pod "PromiseKit/CorePromise", "~> 6.8"
     pod 'Swinject'
     pod 'SnapKit', '~> 5.0.0'
+    pod 'ContextMenu'
     pod 'SwinjectStoryboard' , :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
 end
 

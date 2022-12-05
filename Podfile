@@ -9,6 +9,8 @@ def defaultPod
     pod 'Swinject'
     pod 'SnapKit', '~> 5.0.0'
     pod 'ContextMenu'
+    pod "RxSwift"
+    pod "RxCocoa"
     pod 'SwinjectStoryboard' , :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master'
 end
 

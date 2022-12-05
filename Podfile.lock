@@ -4,6 +4,12 @@ PODS:
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - PromiseKit/CorePromise (6.17.1)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SnapKit (5.0.1)
   - SwiftyStoreKit (0.16.1)
   - Swinject (2.7.1)
@@ -15,6 +21,8 @@ DEPENDENCIES:
   - ContextMenu
   - Kingfisher (~> 5.0)
   - PromiseKit/CorePromise (~> 6.8)
+  - RxCocoa
+  - RxSwift
   - SnapKit (~> 5.0.0)
   - SwiftyStoreKit
   - Swinject
@@ -26,6 +34,9 @@ SPEC REPOS:
     - ContextMenu
     - Kingfisher
     - PromiseKit
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
     - SwiftyStoreKit
     - Swinject
@@ -45,12 +56,15 @@ SPEC CHECKSUMS:
   ContextMenu: f835e09a93f1c28c631b76ee94396d9570397fd1
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 92ca3575fec0b87a27d79be2d03f8d94495d6a10
   XMLCoder: c4638336674de7ba279cd23f2005817d69f538e0
 
-PODFILE CHECKSUM: b5d4b2b474cbc2a285bd254baedab5f08fadfcb9
+PODFILE CHECKSUM: 15911ee0506a66fac24204b94291ecb79206439c
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2

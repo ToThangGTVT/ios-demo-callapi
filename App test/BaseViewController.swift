@@ -20,6 +20,13 @@ class BaseViewController: UIViewController {
         activityView.stopAnimating()
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let placeholder = self.view!
+        Bundle.main.loadNibNamed(String(describing: Self.self), owner: self, options: nil)
+        placeholder.superview?.insertSubview(self.view, aboveSubview: placeholder)
+        placeholder.removeFromSuperview()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

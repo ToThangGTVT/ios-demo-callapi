@@ -21,6 +21,7 @@
 		01B0C724283CDF6B00215CAB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B0C722283CDF6B00215CAB /* MainViewController.swift */; };
 		01B0C725283CDF6B00215CAB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0C723283CDF6B00215CAB /* MainViewController.xib */; };
 		1AA0020F4D50468AE9B0592F /* Pods_App_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFE711D1DF66810635586BF /* Pods_App_test.framework */; };
+		37B787CD293D8A7600C67B31 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B787CC293D8A7600C67B31 /* MainViewModel.swift */; };
 		5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */; };
 		5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1119E46033B7304AEC06 /* UIImageExt.swift */; };
 		8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86453829287ADF1F00EAEE2B /* BaseViewController.swift */; };
@@ -42,6 +43,7 @@
 		01610577283DC48E002F0A66 /* DogEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogEntity.swift; sourceTree = "<group>"; };
 		01B0C722283CDF6B00215CAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		01B0C723283CDF6B00215CAB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		37B787CC293D8A7600C67B31 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3B7314CBCB95FC83A32FD222 /* Pods-App test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App test.debug.xcconfig"; path = "Target Support Files/Pods-App test/Pods-App test.debug.xcconfig"; sourceTree = "<group>"; };
 		5CAF1119E46033B7304AEC06 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
@@ -62,13 +64,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01025DB7283E284100A25A66 /* extension */ = {
+		01025DB7283E284100A25A66 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				01025DB8283E285F00A25A66 /* UIColorExt.swift */,
 				5CAF1119E46033B7304AEC06 /* UIImageExt.swift */,
 			);
-			path = extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		01109D1A283B69720091C9C3 = {
@@ -92,19 +94,20 @@
 		01109D25283B69720091C9C3 /* App test */ = {
 			isa = PBXGroup;
 			children = (
-				01025DB7283E284100A25A66 /* extension */,
-				01610576283DC3D6002F0A66 /* entity */,
-				01610573283DC1E1002F0A66 /* network */,
-				86453829287ADF1F00EAEE2B /* BaseViewController.swift */,
+				37B787CB293D89FC00C67B31 /* ViewModel */,
+				01025DB7283E284100A25A66 /* Extension */,
+				01610576283DC3D6002F0A66 /* Entity */,
+				01610573283DC1E1002F0A66 /* Network */,
+				01B0C721283CDE8F00215CAB /* Screen */,
 				01109D2A283B69720091C9C3 /* ViewController.swift */,
+				86453829287ADF1F00EAEE2B /* BaseViewController.swift */,
 				01109D26283B69720091C9C3 /* AppDelegate.swift */,
 				01109D28283B69720091C9C3 /* SceneDelegate.swift */,
+				5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */,
 				01109D2C283B69720091C9C3 /* Main.storyboard */,
 				01109D2F283B69760091C9C3 /* Assets.xcassets */,
 				01109D31283B69760091C9C3 /* LaunchScreen.storyboard */,
 				01109D34283B69760091C9C3 /* Info.plist */,
-				01B0C721283CDE8F00215CAB /* screen */,
-				5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */,
 			);
 			path = "App test";
 			sourceTree = "<group>";
@@ -127,29 +130,37 @@
 			path = scr1;
 			sourceTree = "<group>";
 		};
-		01610573283DC1E1002F0A66 /* network */ = {
+		01610573283DC1E1002F0A66 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				01610574283DC2B3002F0A66 /* Network.swift */,
 			);
-			path = network;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		01610576283DC3D6002F0A66 /* entity */ = {
+		01610576283DC3D6002F0A66 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				01610577283DC48E002F0A66 /* DogEntity.swift */,
 			);
-			path = entity;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		01B0C721283CDE8F00215CAB /* screen */ = {
+		01B0C721283CDE8F00215CAB /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				0161056E283DC081002F0A66 /* scr1 */,
 				0161056D283DC073002F0A66 /* scr2 */,
 			);
-			path = screen;
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		37B787CB293D89FC00C67B31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37B787CC293D8A7600C67B31 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CA51D815AC8B19618EEA2687 /* Frameworks */ = {
@@ -297,6 +308,7 @@
 				01B0C724283CDF6B00215CAB /* MainViewController.swift in Sources */,
 				5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */,
 				5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */,
+				37B787CD293D8A7600C67B31 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

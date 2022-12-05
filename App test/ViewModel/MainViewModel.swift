@@ -9,17 +9,24 @@ import Foundation
 import RxRelay
 import SwinjectStoryboard
 import RxSwift
+import RxCocoa
 
-class MainViewModel {
-    let network = SwinjectStoryboard.defaultContainer.resolve(Network<DogEntity>.self)!
-    let dogSequence = PublishRelay<DogEntity>()
-    let disposeBag = DisposeBag()
+struct MainViewModel {
+    let useCase: MainUseCaseType
+}
+
+extension MainViewModel {
+        
+    struct Input {
+        let selectDog: Driver<Void>
+    }
     
-    func loadImage() {
-        network.callApi(url: "https://dog.ceo/api/breeds/image/random")
-        network.result.subscribe({ [weak self] val in
-            guard let dog = val.element else { return }
-            self?.dogSequence.accept(dog)
-        }).disposed(by: disposeBag)
+    struct Output {
+        let repos: Driver<DogEntity>
+    }
+    
+    func transform(_ input: MainViewModel.Input) -> MainViewModel.Output {
+        let repo = useCase.getRepos().asDriver(onErrorJustReturn: DogEntity())
+        return Output(repos: repo)
     }
 }

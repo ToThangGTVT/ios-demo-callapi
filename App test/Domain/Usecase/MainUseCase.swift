@@ -15,8 +15,7 @@ protocol MainUseCaseType {
 struct MainUseCase: MainUseCaseType {
     
     func getRepos() -> Observable<DogEntity> {
-        let request = GithubRepoRequest(page: 1)
-        let repository = GithubRepoRepository()
-        return repository.getGithubRepos(input: request)
+        let repository = DogRepoRepository()
+        return repository.getDogRandom()
     }
 }

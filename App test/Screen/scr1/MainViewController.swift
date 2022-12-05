@@ -18,7 +18,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var btnGetDog: UIButton!
     var disposeBag = DisposeBag()
     
-    var viewModel: MainViewModel?
+    var viewModel: MainViewModel? = SwinjectStoryboard.defaultContainer.resolve(MainViewModel.self)!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,15 +37,25 @@ class MainViewController: BaseViewController {
     }
     
     func configAction() {
-        viewModel = SwinjectStoryboard.defaultContainer.resolve(MainViewModel.self)!
-        btnGetDog.rx.tap.asDriver().drive(onNext: { [weak self] val in
-            self?.viewModel?.loadImage()
-        }).disposed(by: disposeBag)
+        let input = MainViewModel.Input(selectDog: btnGetDog.rx.tap.asDriver())
+        let output = viewModel?.transform(input)
         
-        viewModel?.dogSequence.subscribe({ [weak self] event in
+        output?.repos.drive(onNext: { [weak self] val in
             DispatchQueue.main.async {
-                self?.img.setImage(event.element?.message)
+                self?.img.setImage(val.message)
             }
-        }).disposed(by: disposeBag)
+        }).disposed(by: self.disposeBag)
     }
+    
+    @IBAction func clickGetDog(_ sender: Any) {
+        let input = MainViewModel.Input(selectDog: btnGetDog.rx.tap.asDriver())
+        let output = viewModel?.transform(input)
+        
+        output?.repos.drive(onNext: { [weak self] val in
+            DispatchQueue.main.async {
+                self?.img.setImage(val.message)
+            }
+        }).disposed(by: self.disposeBag)
+    }
+
 }

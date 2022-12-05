@@ -26,6 +26,7 @@
 		5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */; };
 		5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1119E46033B7304AEC06 /* UIImageExt.swift */; };
 		8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86453829287ADF1F00EAEE2B /* BaseViewController.swift */; };
+		86C09AAC293E4AC10007FF0E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09AAB293E4AC10007FF0E /* DogRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5CAF1119E46033B7304AEC06 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
 		86453829287ADF1F00EAEE2B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		86C09AAB293E4AC10007FF0E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
 		9BFE711D1DF66810635586BF /* Pods_App_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C209ECD3AD8FC89471A6BEF5 /* Pods-App test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App test.release.xcconfig"; path = "Target Support Files/Pods-App test/Pods-App test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		01109D25283B69720091C9C3 /* App test */ = {
 			isa = PBXGroup;
 			children = (
+				86C09AAA293E4A830007FF0E /* Repository */,
 				37EC3D18293DDF3300FF7C20 /* Domain */,
 				37B787CB293D89FC00C67B31 /* ViewModel */,
 				01025DB7283E284100A25A66 /* Extension */,
@@ -180,6 +183,14 @@
 				37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */,
 			);
 			path = Usecase;
+			sourceTree = "<group>";
+		};
+		86C09AAA293E4A830007FF0E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				86C09AAB293E4AC10007FF0E /* DogRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		CA51D815AC8B19618EEA2687 /* Frameworks */ = {
@@ -328,6 +339,7 @@
 				01B0C724283CDF6B00215CAB /* MainViewController.swift in Sources */,
 				5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */,
 				5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */,
+				86C09AAC293E4AC10007FF0E /* DogRepository.swift in Sources */,
 				37B787CD293D8A7600C67B31 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

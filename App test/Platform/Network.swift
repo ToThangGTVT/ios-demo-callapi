@@ -9,23 +9,32 @@ import Foundation
 import RxRelay
 import RxSwift
 
-class Network<T: Codable> {
-    var result = PublishRelay<T>()
+class Network {
+    
+    static let share = Network()
+    
+    private init() {
+        
+    }
 
-    func callApi(url: String) {
+    func callApi<T: Codable>(url: String) -> Observable<T> {
         NSLog("Call API::::::")
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
-
-        return URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            do {
-                let jsonDecoder = JSONDecoder()
-                let responseModel = try jsonDecoder.decode(T.self, from: data!)
-                print(responseModel)
-                self.result.accept(responseModel)
-            } catch {
-                print("JSON Serialization error")
-            }
-        }).resume()
+        
+        return Observable.create { observable in
+            URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let responseModel = try jsonDecoder.decode(T.self, from: data!)
+                    print(responseModel)
+                    observable.onNext(responseModel)
+                } catch {
+                    print("JSON Serialization error")
+                }
+            }).resume()
+            
+            return Disposables.create()
+        }
     }
 }

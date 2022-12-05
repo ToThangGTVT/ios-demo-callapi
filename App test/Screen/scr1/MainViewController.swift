@@ -23,9 +23,9 @@ class MainViewController: BaseViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         configUI()
         configAction()
     }
@@ -43,7 +43,9 @@ class MainViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         viewModel?.dogSequence.subscribe({ [weak self] event in
-            self?.img.setImage(event.element?.message)
+            DispatchQueue.main.async {
+                self?.img.setImage(event.element?.message)
+            }
         }).disposed(by: disposeBag)
     }
 }

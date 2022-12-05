@@ -7,6 +7,7 @@
 
 import Foundation
 import RxRelay
+import RxSwift
 
 class Network<T: Codable> {
     var result = PublishRelay<T>()
@@ -16,7 +17,7 @@ class Network<T: Codable> {
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
 
-        URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
+        return URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
             do {
                 let jsonDecoder = JSONDecoder()
                 let responseModel = try jsonDecoder.decode(T.self, from: data!)
@@ -26,6 +27,5 @@ class Network<T: Codable> {
                 print("JSON Serialization error")
             }
         }).resume()
-        NSLog("End Call API::::::")
     }
 }

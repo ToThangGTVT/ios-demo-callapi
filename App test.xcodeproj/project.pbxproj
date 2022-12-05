@@ -22,6 +22,7 @@
 		01B0C725283CDF6B00215CAB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B0C723283CDF6B00215CAB /* MainViewController.xib */; };
 		1AA0020F4D50468AE9B0592F /* Pods_App_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BFE711D1DF66810635586BF /* Pods_App_test.framework */; };
 		37B787CD293D8A7600C67B31 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B787CC293D8A7600C67B31 /* MainViewModel.swift */; };
+		37EC3D1D293DE14C00FF7C20 /* MainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */; };
 		5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */; };
 		5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1119E46033B7304AEC06 /* UIImageExt.swift */; };
 		8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86453829287ADF1F00EAEE2B /* BaseViewController.swift */; };
@@ -44,6 +45,7 @@
 		01B0C722283CDF6B00215CAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		01B0C723283CDF6B00215CAB /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		37B787CC293D8A7600C67B31 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUseCase.swift; sourceTree = "<group>"; };
 		3B7314CBCB95FC83A32FD222 /* Pods-App test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App test.debug.xcconfig"; path = "Target Support Files/Pods-App test/Pods-App test.debug.xcconfig"; sourceTree = "<group>"; };
 		5CAF1119E46033B7304AEC06 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
@@ -94,10 +96,10 @@
 		01109D25283B69720091C9C3 /* App test */ = {
 			isa = PBXGroup;
 			children = (
+				37EC3D18293DDF3300FF7C20 /* Domain */,
 				37B787CB293D89FC00C67B31 /* ViewModel */,
 				01025DB7283E284100A25A66 /* Extension */,
-				01610576283DC3D6002F0A66 /* Entity */,
-				01610573283DC1E1002F0A66 /* Network */,
+				01610573283DC1E1002F0A66 /* Platform */,
 				01B0C721283CDE8F00215CAB /* Screen */,
 				01109D2A283B69720091C9C3 /* ViewController.swift */,
 				86453829287ADF1F00EAEE2B /* BaseViewController.swift */,
@@ -130,12 +132,12 @@
 			path = scr1;
 			sourceTree = "<group>";
 		};
-		01610573283DC1E1002F0A66 /* Network */ = {
+		01610573283DC1E1002F0A66 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
 				01610574283DC2B3002F0A66 /* Network.swift */,
 			);
-			path = Network;
+			path = Platform;
 			sourceTree = "<group>";
 		};
 		01610576283DC3D6002F0A66 /* Entity */ = {
@@ -161,6 +163,23 @@
 				37B787CC293D8A7600C67B31 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37EC3D18293DDF3300FF7C20 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				37EC3D19293DDF5700FF7C20 /* Usecase */,
+				01610576283DC3D6002F0A66 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		37EC3D19293DDF5700FF7C20 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */,
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 		CA51D815AC8B19618EEA2687 /* Frameworks */ = {
@@ -299,6 +318,7 @@
 			files = (
 				01610578283DC48E002F0A66 /* DogEntity.swift in Sources */,
 				01109D2B283B69720091C9C3 /* ViewController.swift in Sources */,
+				37EC3D1D293DE14C00FF7C20 /* MainUseCase.swift in Sources */,
 				8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */,
 				01109D27283B69720091C9C3 /* AppDelegate.swift in Sources */,
 				01610575283DC2B3002F0A66 /* Network.swift in Sources */,

@@ -19,6 +19,10 @@ class MainViewController: BaseViewController {
     var disposeBag = DisposeBag()
     
     var viewModel: MainViewModel?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +38,7 @@ class MainViewController: BaseViewController {
     
     func configAction() {
         viewModel = SwinjectStoryboard.defaultContainer.resolve(MainViewModel.self)!
-        btnGetDog?.rx.tap.asDriver().drive(onNext: { [weak self] val in
+        btnGetDog.rx.tap.asDriver().drive(onNext: { [weak self] val in
             self?.viewModel?.loadImage()
         }).disposed(by: disposeBag)
         

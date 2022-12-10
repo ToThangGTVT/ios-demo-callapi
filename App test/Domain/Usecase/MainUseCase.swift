@@ -16,6 +16,9 @@ struct MainUseCase: MainUseCaseType {
     
     func getRepos() -> Observable<DogEntity> {
         let repository = DogRepoRepository()
-        return repository.getDogRandom()
+        return repository.getDogRandom().map({val in
+            let _ = repository.saveDogImage(dogModel: val)
+            return val
+        })
     }
 }

@@ -33,7 +33,6 @@ class Network {
                     print("JSON Serialization error")
                 }
             }).resume()
-            
             return Disposables.create()
         }
     }

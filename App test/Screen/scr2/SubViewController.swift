@@ -6,31 +6,49 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+import CoreData
 
-class SubViewController: UIViewController {
+class SubViewController: BaseViewController {
 
+    @IBOutlet weak var resultTable: UITableView!
+    let disposeBag = DisposeBag()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        let placeholder = self.view!
-        Bundle.main.loadNibNamed("SubViewController", owner: self, options: nil)
-        placeholder.superview?.insertSubview(self.view, aboveSubview: placeholder)
-        placeholder.removeFromSuperview()
     }
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .green
-    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resultTable.register(UINib(nibName: "DogTableViewCell", bundle: nil), forCellReuseIdentifier: "DogTableViewCell")
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let noteFetch: NSFetchRequest<CDDogEntity> = CDDogEntity.fetchRequest()
+        let managedContext = AppDelegate.sharedAppDelegate.persistentContainer.viewContext
+        do {
+            let results = try managedContext.fetch(noteFetch)
+            let observable = Observable.just(results)
+            observable.bind(to: resultTable.rx.items) { [weak self] (tableView, row, element) in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "DogTableViewCell") as? DogTableViewCell
+                cell?.bindView(with: element)
+                return cell ?? UITableViewCell()
+            }.disposed(by: disposeBag)
+        } catch _ as NSError {
+            
+        }
+
+        
+    }
 
 }

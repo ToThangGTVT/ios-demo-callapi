@@ -28,7 +28,8 @@ class SubViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         resultTable.register(UINib(nibName: "DogTableViewCell", bundle: nil), forCellReuseIdentifier: "DogTableViewCell")
-
+        self.resultTable.delegate = nil
+        self.resultTable.dataSource = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,7 +38,7 @@ class SubViewController: BaseViewController {
         let noteFetch: NSFetchRequest<CDDogEntity> = CDDogEntity.fetchRequest()
         let managedContext = AppDelegate.sharedAppDelegate.persistentContainer.viewContext
         do {
-            let results = try managedContext.fetch(noteFetch)
+            let results = try managedContext.fetch(noteFetch).reversed()
             let observable = Observable.just(results)
             observable.bind(to: resultTable.rx.items) { [weak self] (tableView, row, element) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "DogTableViewCell") as? DogTableViewCell

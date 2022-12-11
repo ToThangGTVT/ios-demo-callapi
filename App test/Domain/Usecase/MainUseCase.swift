@@ -9,16 +9,7 @@ import Foundation
 import RxSwift
 
 protocol MainUseCaseType {
-    func getRepos() -> Observable<DogEntity>
-}
+    associatedtype T
 
-struct MainUseCase: MainUseCaseType {
-    
-    func getRepos() -> Observable<DogEntity> {
-        let repository = DogRepoRepository()
-        return repository.getDogRandom().map({val in
-            let _ = repository.saveDogImage(dogModel: val)
-            return val
-        })
-    }
+    func getData<T>() -> Observable<T>
 }

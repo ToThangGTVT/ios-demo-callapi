@@ -11,22 +11,22 @@ import SwinjectStoryboard
 import RxSwift
 import RxCocoa
 
-struct MainViewModel {
-    let useCase: MainUseCaseType
+struct MainViewModel<T: Animal> {
+    let useCase: any MainUseCaseType
 }
 
 extension MainViewModel {
         
     struct Input {
-        let selectDog: Driver<Void>
+        let selectDog: Driver<Void>?
     }
     
-    struct Output {
-        let repos: Driver<DogEntity>
+    struct Output<T> {
+        let repos: Driver<T>
     }
     
-    func transform(_ input: MainViewModel.Input) -> MainViewModel.Output {
-        let repo = useCase.getRepos().asDriver(onErrorJustReturn: DogEntity())
-        return Output(repos: repo)
+    func transform(_ input: MainViewModel.Input) -> MainViewModel.Output<T> {
+        let repo = useCase.getData().asDriver(onErrorJustReturn: T()) as AnyObject
+        return Output(repos: repo as! SharedSequence<DriverSharingStrategy, T>)
     }
 }

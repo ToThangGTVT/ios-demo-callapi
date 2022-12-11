@@ -32,8 +32,14 @@
 		37EC3D1D293DE14C00FF7C20 /* MainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */; };
 		5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */; };
 		5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF1119E46033B7304AEC06 /* UIImageExt.swift */; };
+		8643F57C2945ACD400A2E27C /* DogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F57B2945ACD400A2E27C /* DogUseCase.swift */; };
+		8643F57E2945B29100A2E27C /* CatUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F57D2945B29100A2E27C /* CatUseCase.swift */; };
+		8643F5802945B2B000A2E27C /* CatEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F57F2945B2B000A2E27C /* CatEntity.swift */; };
+		8643F5822945B40900A2E27C /* DogRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F5812945B40900A2E27C /* DogRepoRepository.swift */; };
+		8643F5842945B46200A2E27C /* CatRepoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F5832945B46200A2E27C /* CatRepoRepository.swift */; };
+		8643F5862945B95800A2E27C /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8643F5852945B95800A2E27C /* AnimalEntity.swift */; };
 		8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86453829287ADF1F00EAEE2B /* BaseViewController.swift */; };
-		86C09AAC293E4AC10007FF0E /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09AAB293E4AC10007FF0E /* DogRepository.swift */; };
+		86C09AAC293E4AC10007FF0E /* DogRepoRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C09AAB293E4AC10007FF0E /* DogRepoRepositoryType.swift */; };
 		86FBD56B294416F7000719FE /* DogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBD56A294416F6000719FE /* DogEntity.swift */; };
 		86FBD56F2944172D000719FE /* CDDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86FBD56D2944172D000719FE /* CDDog.xcdatamodeld */; };
 		86FBD57C29441B14000719FE /* CDDogEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBD57A29441B14000719FE /* CDDogEntity+CoreDataClass.swift */; };
@@ -94,8 +100,14 @@
 		3B7314CBCB95FC83A32FD222 /* Pods-App test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App test.debug.xcconfig"; path = "Target Support Files/Pods-App test/Pods-App test.debug.xcconfig"; sourceTree = "<group>"; };
 		5CAF1119E46033B7304AEC06 /* UIImageExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExt.swift; sourceTree = "<group>"; };
 		5CAF1D01CDCB0D0B2D2DD999 /* Swinject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swinject.swift; sourceTree = "<group>"; };
+		8643F57B2945ACD400A2E27C /* DogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogUseCase.swift; sourceTree = "<group>"; };
+		8643F57D2945B29100A2E27C /* CatUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatUseCase.swift; sourceTree = "<group>"; };
+		8643F57F2945B2B000A2E27C /* CatEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatEntity.swift; sourceTree = "<group>"; };
+		8643F5812945B40900A2E27C /* DogRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepoRepository.swift; sourceTree = "<group>"; };
+		8643F5832945B46200A2E27C /* CatRepoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRepoRepository.swift; sourceTree = "<group>"; };
+		8643F5852945B95800A2E27C /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
 		86453829287ADF1F00EAEE2B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		86C09AAB293E4AC10007FF0E /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
+		86C09AAB293E4AC10007FF0E /* DogRepoRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepoRepositoryType.swift; sourceTree = "<group>"; };
 		86FBD56A294416F6000719FE /* DogEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogEntity.swift; sourceTree = "<group>"; };
 		86FBD56E2944172D000719FE /* CDDog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDDog.xcdatamodel; sourceTree = "<group>"; };
 		86FBD57A29441B14000719FE /* CDDogEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDDogEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -210,6 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				86FBD56A294416F6000719FE /* DogEntity.swift */,
+				8643F57F2945B2B000A2E27C /* CatEntity.swift */,
+				8643F5852945B95800A2E27C /* AnimalEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -256,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				37EC3D1C293DE14C00FF7C20 /* MainUseCase.swift */,
+				8643F57B2945ACD400A2E27C /* DogUseCase.swift */,
+				8643F57D2945B29100A2E27C /* CatUseCase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -263,7 +279,9 @@
 		86C09AAA293E4A830007FF0E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				86C09AAB293E4AC10007FF0E /* DogRepository.swift */,
+				86C09AAB293E4AC10007FF0E /* DogRepoRepositoryType.swift */,
+				8643F5812945B40900A2E27C /* DogRepoRepository.swift */,
+				8643F5832945B46200A2E27C /* CatRepoRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -455,14 +473,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8643F5842945B46200A2E27C /* CatRepoRepository.swift in Sources */,
 				86FBD56B294416F7000719FE /* DogEntity.swift in Sources */,
 				01109D2B283B69720091C9C3 /* ViewController.swift in Sources */,
 				37EC3D1D293DE14C00FF7C20 /* MainUseCase.swift in Sources */,
+				8643F5822945B40900A2E27C /* DogRepoRepository.swift in Sources */,
 				8645382A287ADF1F00EAEE2B /* BaseViewController.swift in Sources */,
 				01109D27283B69720091C9C3 /* AppDelegate.swift in Sources */,
 				01610575283DC2B3002F0A66 /* Network.swift in Sources */,
 				01025DB9283E285F00A25A66 /* UIColorExt.swift in Sources */,
 				01610571283DC0AF002F0A66 /* SubViewController.swift in Sources */,
+				8643F57E2945B29100A2E27C /* CatUseCase.swift in Sources */,
 				86FBD57D29441B14000719FE /* CDDogEntity+CoreDataProperties.swift in Sources */,
 				37AA39D4294324D3009071FB /* HomeWidget.intentdefinition in Sources */,
 				01109D29283B69720091C9C3 /* SceneDelegate.swift in Sources */,
@@ -471,8 +492,11 @@
 				86FBD56F2944172D000719FE /* CDDog.xcdatamodeld in Sources */,
 				5CAF116D3F0D52CD14F33C5C /* Swinject.swift in Sources */,
 				86FBD57C29441B14000719FE /* CDDogEntity+CoreDataClass.swift in Sources */,
+				8643F5862945B95800A2E27C /* AnimalEntity.swift in Sources */,
+				8643F5802945B2B000A2E27C /* CatEntity.swift in Sources */,
 				5CAF1185DD07D81AB74415E7 /* UIImageExt.swift in Sources */,
-				86C09AAC293E4AC10007FF0E /* DogRepository.swift in Sources */,
+				86C09AAC293E4AC10007FF0E /* DogRepoRepositoryType.swift in Sources */,
+				8643F57C2945ACD400A2E27C /* DogUseCase.swift in Sources */,
 				37B787CD293D8A7600C67B31 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DogEntity: Codable {
+struct DogEntity: Animal {
     var message: String?
     var status: String?
 }

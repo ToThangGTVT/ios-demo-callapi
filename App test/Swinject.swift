@@ -7,8 +7,11 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     class func setup () {
-        defaultContainer.register(MainViewModel.self) { _ in
-            return MainViewModel(useCase: MainUseCase())
+        defaultContainer.register(MainViewModel<DogEntity>.self) { _ in
+            return MainViewModel(useCase: DogUseCase())
+        }
+        defaultContainer.register(MainViewModel<CatEntity>.self) { _ in
+            return MainViewModel<CatEntity>(useCase: CatUseCase())
         }
     }
 }

@@ -37,6 +37,9 @@
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <connections>
+                            <action selector="pressFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bfv-E3-ETL"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
